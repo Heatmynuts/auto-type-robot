@@ -9,7 +9,24 @@ Ce script envoie automatiquement 200 phrases de conversation dans le chat **Live
 
 Le site renvoie l'en-tête `X-Frame-Options: DENY`. Il ne peut donc pas s'afficher dans une page web tierce (iframe). Le script tourne à la place directement dans votre navigateur, sur la page candy.ai.
 
-## Installation (PC Windows / macOS : Chrome, Edge ou Firefox)
+## Version Mac sans extension (recommandée)
+
+Un petit programme ouvre sa propre fenêtre de navigateur sur candy.ai et y ajoute le panneau Auto-Chat. Vous n'avez rien à installer dans votre navigateur.
+
+1. Installez **Python 3** depuis https://www.python.org/downloads/ (une seule fois).
+2. Téléchargez ce dossier sur votre Mac.
+3. Double-cliquez sur **`Lancer-robot.command`**.
+   - Si macOS bloque l'ouverture : faites clic droit → **Ouvrir** → **Ouvrir**.
+   - Si le double-clic ne fait rien : ouvrez l'application **Terminal**, tapez `bash ` (avec un espace), glissez le fichier dans la fenêtre, puis appuyez sur Entrée.
+4. Le premier lancement installe les composants nécessaires, ce qui prend quelques minutes. Si Google Chrome n'est pas installé, un navigateur Chromium est téléchargé.
+5. Dans la fenêtre du navigateur qui s'ouvre, **connectez-vous**. La connexion est mémorisée pour les fois suivantes.
+6. Réglez le délai dans le panneau en bas à gauche, puis cliquez sur **▶ Démarrer**.
+
+Pour quitter, fermez la fenêtre du navigateur.
+
+Si la connexion avec Google est refusée dans cette fenêtre, utilisez la connexion par e-mail et mot de passe.
+
+## Installation via Tampermonkey (alternative : Chrome, Edge ou Firefox)
 
 1. Installez l'extension **Tampermonkey** depuis la boutique d'extensions de votre navigateur.
 2. Sous Chrome ou Edge : ouvrez les détails de l'extension Tampermonkey et activez **« Autoriser les scripts utilisateur »** si l'option est proposée.
