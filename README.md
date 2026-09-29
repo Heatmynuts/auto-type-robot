@@ -1,8 +1,9 @@
 # Candy Auto-Chat (Tampermonkey)
 
-Ce script envoie automatiquement 200 phrases de conversation dans le chat **Live Actions** de candy.ai.
+Ce script envoie automatiquement 400 phrases de conversation dans le chat **Live Actions** de candy.ai, **en boucle et sans arrêt**.
 
-- L'ordre est **aléatoire, sans répétition**.
+- L'ordre est **aléatoire, sans répétition** au sein d'un tour.
+- Une fois les 400 phrases envoyées, la liste est remélangée et un nouveau tour commence automatiquement.
 - Avant chaque phrase, le script **attend la réponse du bot**, puis un **délai X** (réglable).
 
 ## Pourquoi pas une app web avec webview ?
@@ -39,9 +40,11 @@ Si la connexion avec Google est refusée dans cette fenêtre, utilisez la connex
 2. Un panneau **🤖 Auto-Chat** apparaît en bas à gauche.
 3. Réglez les deux paramètres :
    - **Délai entre phrases (s)** : pause après la réponse du bot, avant la phrase suivante (minimum 1 s).
-   - **Attente max réponse (s)** : si le bot ne répond pas dans ce délai, le script se met en pause.
+   - **Attente max réponse (s)** : si le bot ne répond pas dans ce délai, le script réactive le bouton d'envoi et passe à la phrase suivante.
 4. Cliquez sur **▶ Démarrer**. **⏸ Pause** arrête le script, et **▶ Reprendre** continue là où il s'était arrêté.
-5. **↺** remélange la liste et remet le compteur à zéro.
+5. **↺** remélange la liste et remet le compteur à zéro (tour 1).
+
+Le panneau affiche le numéro du tour et la progression, par exemple « Tour 2 · 57 / 400 ».
 
 Cliquez sur l'en-tête du panneau pour le réduire ou le déplier.
 
@@ -49,13 +52,11 @@ La progression et les réglages sont conservés si vous rechargez la page.
 
 ## Pause automatique
 
-Le script se met en pause tout seul dans les cas suivants :
+Le script tourne sans arrêt. Il se met en pause uniquement quand il ne peut pas continuer :
 
 - l'envoi est refusé (par exemple si vous n'êtes pas connecté) ;
-- le bot ne répond pas dans le délai maximum ;
 - le site affiche sa fenêtre d'abonnement ;
-- vous quittez la page du chat ;
-- les 200 phrases ont été envoyées.
+- vous quittez la page du chat.
 
 ## Remarques
 
