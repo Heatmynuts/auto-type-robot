@@ -1,6 +1,6 @@
 # Candy Auto-Chat (Tampermonkey)
 
-Ce script envoie automatiquement 400 phrases de conversation dans le chat **Live Actions** de candy.ai, **en boucle et sans arrêt**.
+Ce script envoie automatiquement 400 messages de conversation (2 à 3 phrases chacun, environ 150 à 220 caractères) dans le chat **Live Actions** de candy.ai, **en boucle et sans arrêt**.
 
 - L'ordre est **aléatoire, sans répétition** au sein d'un tour.
 - Une fois les 400 phrases envoyées, la liste est remélangée et un nouveau tour commence automatiquement.
